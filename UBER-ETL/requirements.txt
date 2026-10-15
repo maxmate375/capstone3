@@ -1,0 +1,9 @@
+# pyspark and delta-spark are included in the Databricks Runtime.
+# Install the rest on the cluster (Compute > Libraries > PyPI).
+pyspark
+delta-spark
+azure-identity
+azure-storage-file-datalake
+databricks-sdk
+openai
+langgraph

@@ -1,0 +1,161 @@
+{
+  "description": "Uber ride bookings source schema (21 columns). Bronze keeps all as string; silver_type is applied in Silver.",
+  "date_formats_accepted": [
+    "yyyy-MM-dd",
+    "dd-MM-yyyy"
+  ],
+  "null_token": "null",
+  "columns": [
+    {
+      "source_name": "Date",
+      "bronze_name": "date",
+      "bronze_type": "string",
+      "silver_type": "date"
+    },
+    {
+      "source_name": "Time",
+      "bronze_name": "time",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Booking ID",
+      "bronze_name": "booking_id",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Booking Status",
+      "bronze_name": "booking_status",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Customer ID",
+      "bronze_name": "customer_id",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Vehicle Type",
+      "bronze_name": "vehicle_type",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Pickup Location",
+      "bronze_name": "pickup_location",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Drop Location",
+      "bronze_name": "drop_location",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Avg VTAT",
+      "bronze_name": "avg_vtat",
+      "bronze_type": "string",
+      "silver_type": "double"
+    },
+    {
+      "source_name": "Avg CTAT",
+      "bronze_name": "avg_ctat",
+      "bronze_type": "string",
+      "silver_type": "double"
+    },
+    {
+      "source_name": "Cancelled Rides by Customer",
+      "bronze_name": "cancelled_by_customer_flag",
+      "bronze_type": "string",
+      "silver_type": "int"
+    },
+    {
+      "source_name": "Reason for cancelling by Customer",
+      "bronze_name": "customer_cancel_reason",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Cancelled Rides by Driver",
+      "bronze_name": "cancelled_by_driver_flag",
+      "bronze_type": "string",
+      "silver_type": "int"
+    },
+    {
+      "source_name": "Driver Cancellation Reason",
+      "bronze_name": "driver_cancel_reason",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Incomplete Rides",
+      "bronze_name": "incomplete_flag",
+      "bronze_type": "string",
+      "silver_type": "int"
+    },
+    {
+      "source_name": "Incomplete Rides Reason",
+      "bronze_name": "incomplete_reason",
+      "bronze_type": "string",
+      "silver_type": "string"
+    },
+    {
+      "source_name": "Booking Value",
+      "bronze_name": "booking_value",
+      "bronze_type": "string",
+      "silver_type": "double"
+    },
+    {
+      "source_name": "Ride Distance",
+      "bronze_name": "ride_distance",
+      "bronze_type": "string",
+      "silver_type": "double"
+    },
+    {
+      "source_name": "Driver Ratings",
+      "bronze_name": "driver_rating",
+      "bronze_type": "string",
+      "silver_type": "double"
+    },
+    {
+      "source_name": "Customer Rating",
+      "bronze_name": "customer_rating",
+      "bronze_type": "string",
+      "silver_type": "double"
+    },
+    {
+      "source_name": "Payment Method",
+      "bronze_name": "payment_method",
+      "bronze_type": "string",
+      "silver_type": "string"
+    }
+  ],
+  "allowed_values": {
+    "booking_status": [
+      "Completed",
+      "Cancelled by Driver",
+      "Cancelled by Customer",
+      "No Driver Found",
+      "Incomplete"
+    ],
+    "vehicle_type": [
+      "Auto",
+      "Go Mini",
+      "Go Sedan",
+      "Bike",
+      "Premier Sedan",
+      "eBike",
+      "Uber XL"
+    ],
+    "payment_method": [
+      "UPI",
+      "Cash",
+      "Uber Wallet",
+      "Credit Card",
+      "Debit Card"
+    ]
+  }
+}
